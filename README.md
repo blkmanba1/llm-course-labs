@@ -18,13 +18,15 @@
 |---|---|---|---|---|
 | ch1 | BERT 微调：灾害推文二分类（6793 行训练数据中的 6090 行、1523 行验证） | 验证集准确率 **83.19 / 83.98 / 83.78 %**（seed 42/43/44），均值 **83.65 %**，标准差 0.41 | 约 5 分钟/次（8 GB 卡，1 epoch） | `labs/ch1_bert_disaster_tweets/results/`、`docs/figures/ch1_val_accuracy.png` |
 | ch7 | GPT-2 文本隐写：霍夫曼编码 vs 定长编码 | 200 token 内嵌入 **345 / 400 比特**（**1.73 / 2.00 比特/token**），补写解码器后比特恢复率 **100%** | 约 2 秒/次（CPU 也可跑） | `labs/ch7_gpt2_stegano/results/`、`docs/figures/ch7_bits_per_token.png` |
-| ch11 | 情感奖励 RLHF（最小策略梯度替代 trl 的 PPO） | 平均奖励 **0.625 → 0.979**（后 5 步），训练后固定提示评估 **0.899**；样例显示明显的 reward hacking | 约 40 秒（8 GB 卡） | `labs/ch11_rlhf_sentiment/results/`、`docs/figures/ch11_reward_curve.png` |
+| ch11 | 情感奖励 RLHF（最小策略梯度替代 trl 的 PPO） | 平均奖励 **0.625 → 0.979**（后 5 步；复跑 0.670 → 0.886，见下）,训练后评估 **0.899**；样例显示明显的 reward hacking | 约 40 秒（8 GB 卡） | `labs/ch11_rlhf_sentiment/results/`、`docs/figures/ch11_reward_curve.png` |
 
 ![ch1](docs/figures/ch1_val_accuracy.png)
 ![ch7](docs/figures/ch7_bits_per_token.png)
 ![ch11](docs/figures/ch11_reward_curve.png)
 
 未运行的章节与原因见 [`not_run.md`](not_run.md)（大显存或 API key 依赖）。
+
+复跑记录（2026-11-01，干净目录执行 `reproduce.ps1`）：ch1 三个种子 83.72 / 83.85 / 83.65（均值 83.74，sd 0.10）；ch7 与首次完全一致（345 / 400 比特、1.73 / 2.00 比特每 token、还原率 100%）；ch11 奖励 0.670 → 0.886、评估 0.910、平均 KL 8.40，与首次方向一致但幅度不同，属策略梯度在小 batch 下的正常波动。
 
 ## 目录
 
