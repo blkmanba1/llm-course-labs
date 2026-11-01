@@ -1,0 +1,14 @@
+chapter,experiment,metric,value,unit,source
+ch1,BERT disaster-tweet classifier,validation accuracy (seed 42),83.19,%,labs/ch1_bert_disaster_tweets/results/seed42/metrics.json
+ch1,BERT disaster-tweet classifier,validation accuracy (seed 43),83.98,%,labs/ch1_bert_disaster_tweets/results/seed43/metrics.json
+ch1,BERT disaster-tweet classifier,validation accuracy (seed 44),83.78,%,labs/ch1_bert_disaster_tweets/results/seed44/metrics.json
+ch1,BERT disaster-tweet classifier,mean validation accuracy,83.65,%,labs/ch1_bert_disaster_tweets/results/seeds_summary.json
+ch1,BERT disaster-tweet classifier,standard deviation,0.41,%,labs/ch1_bert_disaster_tweets/results/seeds_summary.json
+ch7,GPT-2 steganography (Huffman),bits embedded per token,1.73,bits/token,labs/ch7_gpt2_stegano/results/metrics.json
+ch7,GPT-2 steganography (Huffman),decode bit accuracy,100,%,labs/ch7_gpt2_stegano/results/metrics.json
+ch7,GPT-2 steganography (fixed-length),bits embedded per token,2.00,bits/token,labs/ch7_gpt2_stegano/results/metrics.json
+ch7,GPT-2 steganography (fixed-length),decode bit accuracy,100,%,labs/ch7_gpt2_stegano/results/metrics.json
+ch11,Sentiment-reward RLHF,mean reward (first 5 steps),0.625,probability,labs/ch11_rlhf_sentiment/results/metrics.json
+ch11,Sentiment-reward RLHF,mean reward (last 5 steps),0.979,probability,labs/ch11_rlhf_sentiment/results/metrics.json
+ch11,Sentiment-reward RLHF,mean reward (held-out prompts after training),0.899,probability,labs/ch11_rlhf_sentiment/results/metrics.json
+ch11,Sentiment-reward RLHF,mean KL (k1 estimate),1.17,nats,labs/ch11_rlhf_sentiment/results/metrics.json

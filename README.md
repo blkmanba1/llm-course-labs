@@ -35,35 +35,41 @@ labs/
     run_seeds.py              多随机种子重复，输出 mean±sd
     results/                  日志、指标、测试集预测
   ch7_gpt2_stegano/           GPT-2 文本隐写（课程第 7 章）
-    run_stegano.py            霍夫曼编码 / 固定长度编码两种实现
-    results/                  生成文本、比特嵌入统计
+    run_stegano.py            霍夫曼编码 / 固定长度编码 + 解码验证
+    results/                  生成文本、比特嵌入与还原率
+  ch11_rlhf_sentiment/        情感奖励 RLHF（课程第 11 章，最小策略梯度实现）
+    run_rlhf.py               REINFORCE + KL 惩罚
+    README.md                 与原 notebook 的差异、reward hacking 说明
+    results/                  指标、训练日志、样例文本
+results.csv                   所有指标的机器可读汇总（章 / 实验 / 指标 / 值 / 出处）
+reproduce.ps1                 一条命令跑完三个实验并重画图
 not_run.md                    未运行章节与卡点（显存 / API key）
 ```
 
 ## 复现步骤
 
 ```powershell
-# 1) 环境
-D:\AAA_my_study\大模型\llm_env\Scripts\python.exe -m pip install -r requirements.txt
+# 一条命令（约 20 分钟，其中 ch1 三个种子占大头）
+powershell -ExecutionPolicy Bypass -File .\reproduce.ps1 -Python "D:\AAA_my_study\大模型\llm_env\Scripts\python.exe"
 
-# 2) 第 1 章：BERT 微调（约 4–5 分钟/次）
-cd labs\ch1_bert_disaster_tweets
-D:\AAA_my_study\大模型\llm_env\Scripts\python.exe train_bert.py --epochs 1 --batch 8 --accum 4 --max_len 512 --seed 42
-D:\AAA_my_study\大模型\llm_env\Scripts\python.exe run_seeds.py        # 42/43/44 三个种子
-
-# 3) 第 7 章：GPT-2 隐写（约 10 秒）
-cd ..\ch7_gpt2_stegano
-D:\AAA_my_study\大模型\llm_env\Scripts\python.exe run_stegano.py
+# 或分开跑
+& $py -m pip install -r requirements.txt          # 1) 环境
+cd labs\ch1_bert_disaster_tweets; & $py run_seeds.py                    # 2) 约 4–6 分钟/种子
+cd ..\ch7_gpt2_stegano;            & $py run_stegano.py                 # 3) 约 10 秒
+cd ..\ch11_rlhf_sentiment;         & $py run_rlhf.py                    # 4) 约 40 秒
+& $py ..\..\make_figures.py                                             # 5) 重画图
 ```
 
 数据路径可用环境变量覆盖：`CH1_DATA=<chapter1/TextClassification/TextClassification/data>`。
-模型下载走 `HF_ENDPOINT=https://hf-mirror.com`（脚本已默认设置）。
+模型下载默认走 `HF_ENDPOINT=https://hf-mirror.com`；ch11 的两个 `lvwerra` 仓库镜像不可用，脚本改为直连 `https://huggingface.co`。
 
 ## 与课程原版的差异
 
 1. **第 1 章**：上游用 `run_classification.py` + `transformers.Trainer`，在本机 `transformers 5.8` 下不兼容；我改用等价的显式训练循环（AdamW + 线性预热衰减 + 梯度累积），超参对齐上游 `train.sh`（1 epoch、lr 2e-5、有效 batch 32、max_len 512）。测试集在原数据中无标签，故只报告验证集指标，测试集仅输出预测。
-2. **第 7 章**：notebook 的生成上限 30 步，只嵌入约 56 比特；脚本把上限提到 200 步，并额外记录「嵌入比特数 / 生成 token 数」，用于比较两种编码的容量。
+2. **第 7 章**：notebook 的生成上限 30 步，只嵌入约 56 比特，且没有解码器；脚本把上限提到 200 步，并补写解码器以测量比特还原率。
+3. **第 11 章**：`trl` 的 `PPOTrainer` 与本机 `transformers 5.8` 不兼容；保留课程的两个模型，把训练循环写成 REINFORCE + k1 KL 惩罚（**不是 PPO**），细节与结论见 `labs/ch11_rlhf_sentiment/README.md`。
 
 ## 许可与归属
 
-课程 notebook、课件与数据归原作者；本仓库仅包含我的运行脚本、日志与指标，供个人申请材料与面试复核使用。若上游仓库有具体许可条款，以该条款为准。
+本仓库的脚本、日志与结果文件以 MIT 许可发布（见 `LICENSE`）。
+课程《动手学大模型》(`Lordog/dive-into-llms`) 的 notebook、课件与数据归原作者，未随本仓库分发，使用时请遵循上游许可。
