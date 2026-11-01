@@ -1,0 +1,19 @@
+{
+  "policy": "lvwerra/gpt2-imdb",
+  "reward_model": "lvwerra/distilbert-imdb",
+  "steps": 60,
+  "batch": 4,
+  "gen_len": 20,
+  "kl_coef": 0.02,
+  "lr": 1e-05,
+  "mean_reward_first5_steps": 0.6254,
+  "mean_reward_last5_steps": 0.9792,
+  "mean_reward_eval_after": 0.8994,
+  "mean_kl": 1.1702,
+  "samples": [
+    "This movie is a very good thriller from start to finish. It's a good movie to watch if you like",
+    "I watched this film and I am very pleased with the quality of the acting. I am really looking forward to the film",
+    "The story, plot and style, is very good. There are many excellent touches and a lot of fun.",
+    "The acting was good. There was a great soundtrack that was perfect. I can not praise the movie too much"
+  ]
+}

@@ -1,0 +1,19 @@
+[16:11:20] device=cuda steps=60 batch=4 gen_len=20 kl=0.020
+[16:11:57] models loaded, reward labels={0: 'NEGATIVE', 1: 'POSITIVE'}
+[16:11:58] step 0 reward 0.5000 baseline 0.5000 kl -0.3085 s0=The story the lead girl plays has a good deal of depth which helps the character
+[16:12:02] step 10 reward 0.6402 baseline 0.5435 kl -2.2544 s0=This film is really creepy, and I felt it was so much like the old time sci-fi f
+[16:12:05] step 20 reward 0.5000 baseline 0.5728 kl -0.5043 s0=I watched this film on DVD at a friend's house. I am sure that his friends will 
+[16:12:09] step 30 reward 0.9776 baseline 0.6942 kl -1.4581 s0=This film the "Gone Baby" is the best I've seen yet, not that you could call thi
+[16:12:12] step 40 reward 0.5734 baseline 0.7520 kl 20.5748 s0=The dialogue. A great cast. Some actors.
+[16:12:15] step 50 reward 0.8621 baseline 0.7176 kl 0.0597 s0=I think this movie is way underrated, I've seen better movies and seen better mo
+[16:12:18] step 59 reward 0.9741 baseline 0.7759 kl 0.9933 s0=This movie seems quite interesting with the big time people of the country looki
+[16:12:55] device=cuda steps=60 batch=4 gen_len=20 kl=0.020
+[16:13:04] models loaded, reward labels={0: 'NEGATIVE', 1: 'POSITIVE'}
+[16:13:05] step 0 reward 0.7460 baseline 0.7460 kl -1.6139 s0=The acting was okay for a movie about the British Empire, it is almost too ridic
+[16:13:08] step 10 reward 0.6372 baseline 0.6714 kl -0.5158 s0=I watched this film almost every year, and I still remember how many times I was
+[16:13:11] step 20 reward 0.9402 baseline 0.7375 kl -0.8252 s0=I watched this film, and it was good. The acting was average (and had the cast o
+[16:13:15] step 30 reward 0.6773 baseline 0.7863 kl 0.9964 s0=I watched this film just because of the director's "good stuff." Not only that, 
+[16:13:18] step 40 reward 0.9785 baseline 0.7912 kl -0.5643 s0=This film, although made by a small studio with an artistic integrity, was so vi
+[16:13:21] step 50 reward 0.9770 baseline 0.8431 kl 3.3486 s0=The dialogue that is superb and the photography is spectacular. I also like the 
+[16:13:24] step 59 reward 0.9423 baseline 0.9060 kl 11.9619 s0=This film, like every other, deals with a really bad side of crime; that crime i
+[16:13:25] metrics: {"policy": "lvwerra/gpt2-imdb", "reward_model": "lvwerra/distilbert-imdb", "steps": 60, "batch": 4, "gen_len": 20, "kl_coef": 0.02, "lr": 1e-05, "mean_reward_first5_steps": 0.6254, "mean_reward_last5_steps": 0.9792, "mean_reward_eval_after": 0.8994, "mean_kl": 1.1702}

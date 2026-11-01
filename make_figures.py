@@ -61,6 +61,29 @@ def fig_ch7():
     print("wrote ch7 figure")
 
 
+def fig_ch11():
+    p = os.path.join(HERE, "labs", "ch11_rlhf_sentiment", "results", "metrics.json")
+    if not os.path.exists(p):
+        print("skip ch11: no metrics.json")
+        return
+    d = json.load(open(p, encoding="utf-8"))
+    obs = [("first 5 steps", d["mean_reward_first5_steps"]),
+           ("last 5 steps", d["mean_reward_last5_steps"]),
+           ("eval after", d["mean_reward_eval_after"])]
+    fig, ax = plt.subplots(figsize=(5.2, 3.2), dpi=160)
+    bars = ax.bar([o[0] for o in obs], [o[1] for o in obs], color=["#868E96", "#4C6EF5", "#12B886"], width=0.5)
+    for b, o in zip(bars, obs):
+        ax.text(b.get_x() + b.get_width() / 2, o[1] + 0.015, "%.3f" % o[1], ha="center", fontsize=9)
+    ax.set_ylim(0, 1.12)
+    ax.set_ylabel("mean reward (positive-class probability)")
+    ax.set_title("ch11 · sentiment-reward RLHF on gpt2-imdb (60 steps, KL 0.02)", fontsize=9)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "ch11_reward_curve.png"))
+    print("wrote ch11 figure")
+
+
 if __name__ == "__main__":
     fig_ch1()
     fig_ch7()
+    fig_ch11()
