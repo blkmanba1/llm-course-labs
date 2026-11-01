@@ -1,0 +1,9 @@
+# 运行环境（实测）
+# Python 3.11.3；venv 位于 D:\AAA_my_study\大模型\llm_env
+torch==2.11.0+cu128
+transformers==5.8.0
+datasets==4.8.5
+accelerate==1.13.0
+pandas==3.0.3
+numpy==2.4.4
+scikit-learn==1.8.0

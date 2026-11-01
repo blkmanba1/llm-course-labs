@@ -1,0 +1,11 @@
+[15:15:57] device=cuda NVIDIA GeForce RTX 4060 Ti
+[15:16:39] device=cuda NVIDIA GeForce RTX 4060 Ti
+[15:16:42] rows train=6090 val=1523 test=3263(unlabelled) max_len=512 batch=8 accum=4
+[15:18:48] epoch 1 step 100/190 loss 0.5571
+[15:20:53] epoch 1 done val_acc=0.8359 val_loss=0.4005 elapsed=251s
+[15:21:49] FINAL val_acc=0.8359 val_loss=0.4005
+[15:22:26] device=cuda NVIDIA GeForce RTX 4060 Ti
+[15:22:29] rows train=6090 val=1523 test=3263(unlabelled) max_len=512 batch=8 accum=4
+[15:24:36] epoch 1 step 100/190 loss 0.3157
+[15:27:04] epoch 1 done val_acc=0.8326 val_loss=0.3823 elapsed=275s
+[15:28:10] FINAL val_acc=0.8326 val_loss=0.3823

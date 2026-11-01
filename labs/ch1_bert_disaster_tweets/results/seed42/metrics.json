@@ -1,0 +1,21 @@
+{
+  "model": "bert-base-uncased",
+  "seed": 42,
+  "epochs": 1.0,
+  "lr": 2e-05,
+  "batch": 8,
+  "accum": 4,
+  "max_len": 512,
+  "rows": {
+    "train": 6090,
+    "val": 1523,
+    "test_unlabelled": 3263
+  },
+  "val_accuracy": 0.8319,
+  "val_precision_pos": 0.8523,
+  "val_recall_pos": 0.7729,
+  "val_f1_pos": 0.8107,
+  "test_positive_rate": 0.3828,
+  "seconds": 371.4,
+  "device": "cuda"
+}

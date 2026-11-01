@@ -1,0 +1,7 @@
+[15:35:24] device=cuda NVIDIA GeForce RTX 4060 Ti
+[15:35:24] seed=43
+[15:35:27] rows train=6090 val=1523 test=3263(unlabelled) max_len=512 batch=8 accum=4
+[15:37:53] epoch 1 step 100/190 loss 0.5187
+[15:40:36] epoch 1 done val_acc=0.8398 val_loss=0.3926 elapsed=309s
+[15:49:25] FINAL val_acc=0.8398 val_loss=0.3926
+[15:49:42] metrics: {"model": "bert-base-uncased", "seed": 43, "epochs": 1.0, "lr": 2e-05, "batch": 8, "accum": 4, "max_len": 512, "rows": {"train": 6090, "val": 1523, "test_unlabelled": 3263}, "val_accuracy": 0.8398, "val_precision_pos": 0.8455, "val_recall_pos": 0.8025, "val_f1_pos": 0.8234, "test_positive_rate": 0.3914, "seconds": 855.1, "device": "cuda"}

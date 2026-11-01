@@ -1,0 +1,28 @@
+[15:15:25] device=cuda:0
+[15:15:43] gpt2 loaded, params=124.4M
+[15:15:44] huffman: {"bits_total": 3000, "bits_embedded": 56, "tokens_generated": 33, "bits_per_token": 1.7, "seconds": 1.3}
+[15:15:44]   stega: Once upon a time, it was not uncommon, and it has always been the case, for a long while now, that a certain number of men, in some of
+[15:15:44]   normal: Once upon a time, our "own" style was one that was famous for being a lot easier to boot off.  Kisses, tripods, and
+[15:15:44] flc: {"bits_total": 3000, "bits_embedded": 60, "tokens_generated": 33, "bits_per_token": 1.82, "seconds": 0.6}
+[15:15:44]   stega: Once upon a time, when I had been a student of philosophy and theology at Harvard I began to realize what a wonderful way to live I could be in this world,
+[15:15:44]   normal: Once upon a time breakfast sandwiches and more hamburger sticks be more popular. Now they entail seating up onto either once, twice or three times a day. In add
+[15:15:44] done
+[15:15:59] device=cuda:0
+[15:16:02] gpt2 loaded, params=124.4M
+[15:16:08] huffman: {"bits_total": 3000, "bits_embedded": 345, "tokens_generated": 203, "bits_per_token": 1.7, "seconds": 5.2}
+[15:16:08]   stega: Once upon a time, it was not uncommon, and it has always been the case, for a long while now, that a certain number of men, in some of their most eminent positi
+[15:16:08]   normal: Once upon a time, our "own" style was one that was famous for being a lot easier to boot off.  Kisses, tripods, and breakfast sandwiches that let the jock be mo
+[15:16:12] flc: {"bits_total": 3000, "bits_embedded": 400, "tokens_generated": 203, "bits_per_token": 1.97, "seconds": 4.6}
+[15:16:12]   stega: Once upon a time, when I had been a student of philosophy and theology at Harvard I began to realize what a wonderful way to live I could be in this world, in t
+[15:16:12]   normal: Once upon a time the view was given for Nyx's home – and then a spot in the upper right hand corner at the same second by Flocch as Kald. Chomped by the hit, an
+[15:16:12] done
+[15:39:58] device=cuda:0 max_steps=200
+[15:40:02] gpt2 params=124.4M
+[15:55:18] device=cuda:0 max_steps=200
+[15:55:21] gpt2 params=124.4M
+[15:55:25] huffman: {"bits_sent": 345, "tokens_generated": 200, "bits_per_token": 1.73, "decode_bit_accuracy": 1.0, "decode_bits_compared": 345, "encode_seconds": 2.1}
+[15:55:25]   text: Once upon a time, it was not uncommon, and it has always been the case, for a long while now, that a certain number of men, in some of their
+[15:55:29] flc: {"bits_sent": 400, "tokens_generated": 200, "bits_per_token": 2.0, "decode_bit_accuracy": 1.0, "decode_bits_compared": 400, "encode_seconds": 1.8}
+[15:55:29]   text: Once upon a time, when I had been a student of philosophy and theology at Harvard I began to realize what a wonderful way to live I could be
+[15:55:31] normal: Once upon a time, our "own" style was one that was famous for being a lot easier to boot off.  Kisses, tripods, and breakfast sandwiches tha
+[15:55:31] done

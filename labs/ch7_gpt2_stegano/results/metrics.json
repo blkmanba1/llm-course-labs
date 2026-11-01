@@ -1,0 +1,18 @@
+{
+  "huffman": {
+    "bits_sent": 345,
+    "tokens_generated": 200,
+    "bits_per_token": 1.73,
+    "decode_bit_accuracy": 1.0,
+    "decode_bits_compared": 345,
+    "encode_seconds": 2.1
+  },
+  "flc": {
+    "bits_sent": 400,
+    "tokens_generated": 200,
+    "bits_per_token": 2.0,
+    "decode_bit_accuracy": 1.0,
+    "decode_bits_compared": 400,
+    "encode_seconds": 1.8
+  }
+}
