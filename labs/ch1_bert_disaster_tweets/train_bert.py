@@ -22,7 +22,7 @@ os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
 DATA = os.environ.get(
     "CH1_DATA",
-    r"D:\AAA_my_study\大模型\dive-into-llms-main\documents\chapter1\TextClassification\TextClassification\data",
+    r"data",
 )
 
 

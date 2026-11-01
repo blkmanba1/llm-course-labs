@@ -1,5 +1,5 @@
 # 运行环境（实测）
-# Python 3.11.3；venv 位于 D:\AAA_my_study\大模型\llm_env
+# Python 3.11.3；venv 位于 <venv>
 torch==2.11.0+cu128
 transformers==5.8.0
 datasets==4.8.5

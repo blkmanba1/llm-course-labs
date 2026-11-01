@@ -54,7 +54,7 @@ KL 用的是 k1 估计量（逐 token 对数概率差），不是 PPO 的 clip �
 ## 复现
 
 ```powershell
-D:\AAA_my_study\大模型\llm_env\Scripts\python.exe run_rlhf.py
+<venv>\Scripts\python.exe run_rlhf.py
 ```
 
 约 40 秒（8 GB 卡）。模型从 `https://huggingface.co` 拉取（`hf-mirror.com` 对这两个仓库返回元数据错误）。

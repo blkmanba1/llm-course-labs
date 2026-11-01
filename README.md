@@ -8,7 +8,7 @@
 |---|---|
 | GPU | NVIDIA GeForce RTX 4060 Ti，8 GB 显存 |
 | 驱动 / CUDA | 610.88 / torch 2.11.0+cu128 |
-| Python | 3.11.3（venv：`D:\AAA_my_study\大模型\llm_env`） |
+| Python | 3.11.3（venv：`<venv>`） |
 | 关键库 | transformers 5.8.0、datasets 4.8.5、pandas 3.0.3、scikit-learn 1.8.0 |
 | 磁盘 | 约 105 GB 可用 |
 
@@ -58,7 +58,7 @@ not_run.md                    未运行章节与卡点（显存 / API key）
 
 ```powershell
 # 一条命令（约 20 分钟，其中 ch1 三个种子占大头）
-powershell -ExecutionPolicy Bypass -File .\reproduce.ps1 -Python "D:\AAA_my_study\大模型\llm_env\Scripts\python.exe"
+powershell -ExecutionPolicy Bypass -File .\reproduce.ps1 -Python "<venv>\Scripts\python.exe"
 
 # 或分开跑
 & $py -m pip install -r requirements.txt          # 1) 环境
