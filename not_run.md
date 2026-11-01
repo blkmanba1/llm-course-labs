@@ -5,11 +5,11 @@
 | 章 | 内容 | 卡点 | 结论 |
 |---|---|---|---|
 | ch2 | 提示学习与思维链 | notebook 走 OpenAI 兼容接口，需要 API key | 未跑（需要 key） |
-| ch3 | 知识编辑（EasyEdit） | EasyEdit 默认 GPT-J 6B，fp16 约 12 GB；本机 8 GB 不足 | 未跑（显存不足） |
+| ch3 | 知识编辑（EasyEdit） | EasyEdit 默认 GPT-J 6B，fp16 约 12 GB；且需单独装 EasyEdit 一套依赖 | 未跑（显存不足） |
 | ch4 | 数学推理 SFT | 课程 README 明确要求 ≥40 GB 显存 | 未跑（显存不足） |
 | ch5 | 文本水印（Baichuan-7B + OpenAI key） | 7B 权重 + API key 双重依赖 | 未跑（显存与 key 均不足） |
 | ch6 | 越狱攻击 | notebook 需要 api_key | 未跑（需要 key） |
-| ch8 | 多模态大模型 | 需要 InternVL 级视觉语言模型权重与显存 | 未跑（显存不足） |
+| ch8 | 多模态大模型 | 本章是架构讲解 + 搭建流程，未附可直接运行的数据集；搭建需视觉投影层 + 7B 级语言模型 | 未跑（无配套数据、显存不足） |
 | ch9 | GUI 智能体（Qwen2-VL-7B + LLaMA-Factory） | 课程 README 写明至少 3×80 GB A100 | 未跑（显存不足） |
 | ch10 | 智能体（OpenAI 接口） | 需要 OPENAI_API_KEY | 未跑（需要 key） |
 
