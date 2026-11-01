@@ -1,0 +1,38 @@
+{
+  "model": "deepseek-chat",
+  "n_questions": 40,
+  "strategies": {
+    "zero_shot": {
+      "accuracy": 0.925,
+      "correct": 37,
+      "n": 40,
+      "mean_completion_tokens": 66.5,
+      "prompt_tokens_total": 2619,
+      "seconds": 40.3
+    },
+    "cot": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "n": 40,
+      "mean_completion_tokens": 156.4,
+      "prompt_tokens_total": 3019,
+      "seconds": 43.2
+    },
+    "few_shot": {
+      "accuracy": 0.975,
+      "correct": 39,
+      "n": 40,
+      "mean_completion_tokens": 87.8,
+      "prompt_tokens_total": 8408,
+      "seconds": 40.6
+    },
+    "few_shot_cot": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "n": 40,
+      "mean_completion_tokens": 127.1,
+      "prompt_tokens_total": 8808,
+      "seconds": 41.3
+    }
+  }
+}

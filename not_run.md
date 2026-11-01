@@ -4,15 +4,12 @@
 
 | 章 | 内容 | 卡点 | 结论 |
 |---|---|---|---|
-| ch2 | 提示学习与思维链 | notebook 走 OpenAI 兼容接口，需要 API key | 未跑（需要 key） |
 | ch3 | 知识编辑（EasyEdit） | EasyEdit 默认 GPT-J 6B，fp16 约 12 GB；且需单独装 EasyEdit 一套依赖 | 未跑（显存不足） |
 | ch4 | 数学推理 SFT | 课程 README 明确要求 ≥40 GB 显存 | 未跑（显存不足） |
 | ch5 | 文本水印（Baichuan-7B + OpenAI key） | 7B 权重 + API key 双重依赖 | 未跑（显存与 key 均不足） |
-| ch6 | 越狱攻击 | notebook 需要 api_key | 未跑（需要 key） |
 | ch8 | 多模态大模型 | 本章是架构讲解 + 搭建流程，未附可直接运行的数据集；搭建需视觉投影层 + 7B 级语言模型 | 未跑（无配套数据、显存不足） |
 | ch9 | GUI 智能体（Qwen2-VL-7B + LLaMA-Factory） | 课程 README 写明至少 3×80 GB A100 | 未跑（显存不足） |
-| ch10 | 智能体（OpenAI 接口） | 需要 OPENAI_API_KEY | 未跑（需要 key） |
 
-已运行的章节：ch1（BERT 微调）、ch7（GPT-2 文本隐写）、ch11（情感奖励 RLHF，用最小策略梯度循环替代 trl 的 PPOTrainer，见 `labs/ch11_rlhf_sentiment/README.md`）。
+已运行的章节（六个）：ch1（BERT 微调）、ch2（GSM8K 上的提示与思维链对比，DeepSeek API）、ch6（提示注入鲁棒性，安全侧复现）、ch7（GPT-2 文本隐写）、ch10（工具调用智能体，DeepSeek function calling）、ch11（情感奖励 RLHF，用最小策略梯度循环替代 trl 的 PPOTrainer）。
 
 处理原则：未跑的章节不写进个人陈述；等有了云 GPU 或 API key 再补跑，届时把真实指标补到 `README.md` 的结果表与对应 `labs/` 目录。

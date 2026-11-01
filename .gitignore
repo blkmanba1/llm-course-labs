@@ -12,3 +12,6 @@ models/
 # 训练中间件
 checkpoints/
 runs/
+
+# 运行时下载的数据（GSM8K 子集、样例文档）
+labs/*/data/

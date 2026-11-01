@@ -83,9 +83,9 @@ class TestResultsConsistency(unittest.TestCase):
     def test_no_missing_metric_rows(self):
         """results.csv 应覆盖三个实验，至少 13 行。"""
         rows = read_csv()
-        self.assertGreaterEqual(len(rows), 13)
+        self.assertGreaterEqual(len(rows), 20)
         chapters = {r["chapter"] for r in rows}
-        self.assertEqual(chapters, {"ch1", "ch7", "ch11"})
+        self.assertEqual(chapters, {"ch1", "ch2", "ch6", "ch7", "ch10", "ch11"})
 
 
 if __name__ == "__main__":

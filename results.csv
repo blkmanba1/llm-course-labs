@@ -12,3 +12,13 @@ ch11,Sentiment-reward RLHF,mean reward (first 5 steps),0.625,probability,labs/ch
 ch11,Sentiment-reward RLHF,mean reward (last 5 steps),0.979,probability,labs/ch11_rlhf_sentiment/results/metrics.json
 ch11,Sentiment-reward RLHF,mean reward (held-out prompts after training),0.899,probability,labs/ch11_rlhf_sentiment/results/metrics.json
 ch11,Sentiment-reward RLHF,mean KL (k1 estimate),1.17,nats,labs/ch11_rlhf_sentiment/results/metrics.json
+ch2,Prompting on GSM8K (40 questions),accuracy: zero-shot,0.925,fraction,labs/ch2_prompting_cot/results/metrics.json
+ch2,Prompting on GSM8K (40 questions),accuracy: zero-shot CoT,1.0,fraction,labs/ch2_prompting_cot/results/metrics.json
+ch2,Prompting on GSM8K (40 questions),accuracy: few-shot,0.975,fraction,labs/ch2_prompting_cot/results/metrics.json
+ch2,Prompting on GSM8K (40 questions),accuracy: few-shot CoT,1.0,fraction,labs/ch2_prompting_cot/results/metrics.json
+ch2,Prompting on GSM8K (40 questions),mean completion tokens: zero-shot CoT,156.4,tokens,labs/ch2_prompting_cot/results/metrics.json
+ch6,Prompt injection on a summariser,attack success rate: naive,1.0,fraction,labs/ch6_prompt_injection/results/metrics.json
+ch6,Prompt injection on a summariser,attack success rate: delimited,0.0,fraction,labs/ch6_prompt_injection/results/metrics.json
+ch6,Prompt injection on a summariser,clean summary rate: delimited,1.0,fraction,labs/ch6_prompt_injection/results/metrics.json
+ch10,Tool-using agent (calculator / file / unit),tasks solved,5,of 5,labs/ch10_tool_agent/results/metrics.json
+ch10,Tool-using agent (calculator / file / unit),total tool calls,6,calls,labs/ch10_tool_agent/results/metrics.json
